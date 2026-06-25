@@ -15,7 +15,10 @@ const schemaPath = path.join(__dirname, 'schema.sql');
 const schema = fs.readFileSync(schemaPath, 'utf8');
 db.exec(schema);
 
-// Admin credentials from env or defaults
+// Check if database is already seeded
+const userCount = db.prepare('SELECT COUNT(*) as count FROM admin_users').get().count;
+if (userCount === 0) {
+  // Admin credentials from env or defaults
 const email = process.env.ADMIN_EMAIL || 'nnamanvverma@gmail.com';
 const password = process.env.ADMIN_PASSWORD || 'changeme123';
 
@@ -274,4 +277,7 @@ for (const [key, val] of Object.entries(settingsData)) {
   insertSetting.run(key, val);
 }
 
-console.log('Seeding completed successfully.');
+  console.log('Seeding completed successfully.');
+} else {
+  console.log('Database already seeded. Skipping seeding.');
+}
