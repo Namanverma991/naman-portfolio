@@ -47,6 +47,7 @@ Here is the folder structure of this app.
 ```bash
 modern-portfolio/
   |- components/
+    |-- admin/
     |-- Avatar.jsx
     |-- Bulb.jsx
     |-- CardLeft.jsx
@@ -59,21 +60,38 @@ modern-portfolio/
     |-- ProjectsBtn.jsx
     |-- ServiceSlider.jsx
     |-- Socials.jsx
-    |-- TestimonialSlider.jsx
     |-- TopLeftImg.jsx
     |-- Transition.jsx
     |-- WorkSlider.jsx
+  |- data/
+    |-- aboutData.js
+    |-- resumeData.js
+    |-- serviceData.js
+    |-- socialData.js
+    |-- workData.js
+  |- db/
+    |-- index.js
+    |-- schema.sql
+    |-- seed.js
+  |- lib/
+    |-- AdminAuthContext.jsx
+    |-- auditLog.js
+    |-- auth.js
+    |-- useAnalytics.js
   |- pages/
     |-- about/
+    |-- admin/
+    |-- api/
     |-- contact/
     |-- services/
-    |-- testimonials/
     |-- work/
     |-- _app.jsx
     |-- index.jsx
   |- public/
   |- styles/
     |-- globals.css
+  |- .env.example
+  |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
   |- netlify.toml
@@ -127,20 +145,30 @@ Useful resources and dependencies that are used in Modern Portfolio.
 <!--- DEPENDENCIES_START --->
 - [@next/font](https://www.npmjs.com/package/@next/font): ^13.4.4
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.14
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs): ^3.0.3
+- [better-sqlite3](https://www.npmjs.com/package/better-sqlite3): ^12.10.0
+- [chart.js](https://www.npmjs.com/package/chart.js): ^4.5.1
+- [csv-stringify](https://www.npmjs.com/package/csv-stringify): ^6.7.0
 - [eslint](https://www.npmjs.com/package/eslint): 8.41.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 13.4.3
+- [formidable](https://www.npmjs.com/package/formidable): ^3.5.4
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^10.12.16
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken): ^9.0.3
 - [next](https://www.npmjs.com/package/next): 15.5.18
+- [pdf-parse](https://www.npmjs.com/package/pdf-parse): ^1.1.1
 - [postcss](https://www.npmjs.com/package/postcss): ^8.4.23
 - [react](https://www.npmjs.com/package/react): 18.2.0
+- [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2): ^5.3.1
 - [react-countup](https://www.npmjs.com/package/react-countup): ^6.4.2
 - [react-dom](https://www.npmjs.com/package/react-dom): 18.2.0
 - [react-icons](https://www.npmjs.com/package/react-icons): ^4.8.0
 - [react-tsparticles](https://www.npmjs.com/package/react-tsparticles): ^2.9.3
 - [swiper](https://www.npmjs.com/package/swiper): ^12.1.2
+- [swr](https://www.npmjs.com/package/swr): ^2.4.1
 - [tailwind-scrollbar](https://www.npmjs.com/package/tailwind-scrollbar): ^3.0.4
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.2
 - [tsparticles](https://www.npmjs.com/package/tsparticles): ^2.9.3
+- [ua-parser-js](https://www.npmjs.com/package/ua-parser-js): ^2.0.10
 
 <!--- DEPENDENCIES_END --->
 
