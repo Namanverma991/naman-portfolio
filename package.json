@@ -44,8 +44,8 @@
     }
   ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node db/seed.js && next dev",
+    "build": "node db/seed.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
